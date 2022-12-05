@@ -1,0 +1,7 @@
+deviceid,productname,manufacturer,communication
+1,Indoor Cam 2K Pan & Tilt P24,Eufy,Zigbee
+2,Door Window 2,Shelly,WiFi
+3,Door and Window Sensor,Aqara,Zigbee
+4,Relay Switch FGS-223,Fibaro,Z-Wave
+5,RGBW2 RGBW Led controller,Shelly,WiFi
+6,Smart Plug,Wemo,WiFi
