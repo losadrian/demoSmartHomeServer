@@ -1,5 +1,5 @@
 # demoSmartHomeServer
-This python code belongs to my Proof of Concept iOS app project.
+This python code belongs to my [Proof of Concept iOS app](https://github.com/losadrian/demoSmartHomeClient) project.
 
 Environment version:
 -------
