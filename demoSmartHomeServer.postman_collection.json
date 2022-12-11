@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "90d9f8e7-8d78-4cb2-828f-f597f7a0a541",
+		"name": "demo_server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16557594"
+	},
+	"item": [
+		{
+			"name": "smarthomedevice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/device",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "smarthomedevice by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/device/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"device",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "smarthome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/smarthome",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"smarthome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "smarthome by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/smarthome/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"smarthome",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth to smarthome",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"welcome\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/smarthome/authentication",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"smarthome",
+						"authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "smarthomedevice by smarthome id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer A1B2C3D4E5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/smarthome/2/device",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"smarthome",
+						"2",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "smarthomedevice by smarthome id and device id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/smarthome/2/device/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"smarthome",
+						"2",
+						"device",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "smarthomedevice with queries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/device?communication=WiFi&manufacturer=Shelly",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"device"
+					],
+					"query": [
+						{
+							"key": "communication",
+							"value": "WiFi"
+						},
+						{
+							"key": "manufacturer",
+							"value": "Shelly"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "smarthomedevice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"communication\": \"new communication\",\n    \"manufacturer\": \"new manufacturer\",\n    \"product_name\": \"new product_name\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/device",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove smarthomedevice by smarthome id and device id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/smarthome/2/device/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"smarthome",
+						"2",
+						"device",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove smarthomedevice by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/device/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"device",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
